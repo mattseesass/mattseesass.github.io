@@ -118,3 +118,8 @@ if (time>0)
 	setTimeout("hideimage()", time*1000)
 }
 animation();
+
+function changevolume(amount) {
+    var audioobject = document.getElementsByTagName("audio")[0];
+    audioobject.volume = amount;
+}
