@@ -1,6 +1,10 @@
  <script type="text/javascript" SRC="picture-fall.js"></script>
- <audio loop autoplay>
- <source src="money.mp3">
+ <audio autoplay loop id="player">
+	<source src="money.mp3" type="audio/mp3"/>
+	<script>
+		var audio = document.currentScript.parentElement;
+		audio.volume = 0.20;
+	</script>
  </audio>
  <div id="left">
 
