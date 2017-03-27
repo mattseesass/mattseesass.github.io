@@ -1,121 +1,442 @@
- <script type="text/javascript" SRC="picture-fall.js"></script>
- <audio autoplay loop id="player">
-	<source src="money.mp3" type="audio/mp3"/>
-	<script>
-		var audio = document.currentScript.parentElement;
-		audio.volume = 0.20;
-	</script>
- </audio>
- <div id="left">
+<!-- 
+                pWebsite by:
+        _                   
+       | |                  
+  _ __ | | ___  _ __  _ __  
+ | '_ \| |/ _ \| '_ \| '_ \ 
+ | |_) | | (_) | |_) | |_) |
+ | .__/|_|\___/| .__/| .__/ 
+ | |           | |   | |    
+ |_|           |_|   |_|
+ 
+http://plopp.site/
 
- 	<a href="https://hellcase.com/fmattcs " target="_blank">HellCase.com</a><br>
- 	Code MattCS [Free Case]<br><br>
+=============================================================-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
- 	<a href="https://csgoexclusive.com/" target="_blank">CSGOexclusive.com</a><br>
- 	Code MattSeesAss [$5]<br><br>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="shortcut icon" href="favicon.png">
+<head>
+<audio autoplay loop  src=music.mp3></audio>
 
- 	<a href="https://csgoatse.com/user/affiliates " target="_blank">CSGOatse.com</a><br>
- 	Code MattCS [$1]<br><br>
+<input type="range" id="vol" max="1" min="0" step="0.01" onchange="changevolume(this.value)"/>
 
- 	<a href="http://csgobounty.com/#/" target="_blank">CSGObounty.com</a><br>
- 	Code MattSeesAss [$0.50]<br><br>
+  <title>MattCS</title>
+  <style type="text/css">
+/*<![CDATA[*/
 
- 	<a href="https://www.csgolive.com/affiliates" target="_blank">CSGOlive.com</a><br>
- 	Code MattCS [$0.40]<br><br>
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 
- 	<a href="https://csgopolygon.com/affiliates" target="_blank">CSGOpolygon.com</a><br>
- 	Code MattCS [$0.50]<br><br>
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 
- </div>
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 
- <div id="right">
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 
- 	<a href="https://society.gg/#/bust?ref=mattcs" target="_blank">Society.gg</a><br>
- 	Code MattCS [$0.50]<br><br>
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 
- 	<a href="https://csgoempire.com/" target="_blank">CSGOempire.com</a><br>
- 	Code MattCS [$0.50]<br><br>
+  /* ---- reset ---- */
 
- 	<a href="https://csgo-case.com/code/" target="_blank">CSGO-CASE.com</a><br>
- 	Code MattCS [$0.15]<br><br>
+  body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  }
 
- 	<a href="https://skinsgambling.com/refferal" target="_blank">SkinsGambling.com</a><br>
- 	Code MattSeesAss [$0.50]<br><br>
+  canvas {
+  display: block;
+  vertical-align: bottom;
+  }
 
- 	<a href="http://www.csgoboss.com/referrals" target="_blank">CSGOboss.com</a><br>
- 	Code MattCS [$0.25]<br><br>
 
- 	<a href="https://skinhub.com/rewards" target="_blank">SkinHub.com</a><br>
- 	Code MattCS [$0.50]<br><br>
+  /* ---- particles.js container ---- */
 
- </div>
+  #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  }
 
- <style>
+  body {
+        background-color:black;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-attachment: fixed;
+		overflow: hidden;
+  }
 
- 	@font-face{
+  @font-face{
     font-family: roboto;
     src: url(roboto.ttf);
- 	}
+  }
+   
+	#codes {
+        font-size:15px;
+        font-family: roboto;
+        color:white;
+    position: absolute;
+    left: 50%;
+    top: 97%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+        }
+   
+  #matt {
+        font-size:25px;
+        font-family: roboto;
+        color:white;
+    position: absolute;
+    left: 50%;
+    top: 50%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+        }
 
- 	p {
- 		display: inline-block;
-	}
+  #twitter{
+        position:absolute;
+        left:37%;
+    top:35%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
- 	#left {
- 		font-size: 20px;
- 		color: white;
- 		font-family: roboto;
- 		position: absolute;
-    	left: 40%;
-    	top: 50%;   
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
- 	}
+  #twitter:hover{
+        opacity: 0.5;
+        position:absolute;
+        left:37%;
+    top:35%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
- 	#right {
- 		font-size: 20px;
- 		color: white;
- 		font-family: roboto;
- 		position: absolute;
-    	left: 60%;
-    	top: 50%;   
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
- 	}
+  #steam{
+        position:absolute;
+        left: 63%;
+    top: 35%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
- 	a:link {
- 		color: white;
-    	text-decoration: none;
-	}
+  #steam:hover{
+        opacity:0.5;
+        position:absolute;
+        left: 63%;
+    top: 35%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
-	a:visited {
-		color: white;
-   		text-decoration: none;
-	}
+  #instagram{
+        position:absolute;
+        left: 63%;
+    top: 65%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
-	a:hover {
-		color: black;
-    	text-decoration: none;
-	}
+  #instagram:hover{
+        opacity:0.5;
+        position:absolute;
+        left: 63%;
+    top: 65%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
-	a:active {
-		color: white;
-   		text-decoration: none;
-	}
+  #snapchat{
+        position:absolute;
+        left: 37%;
+    top: 65%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
 
- 	body {
- 		background: url(bg.jpg);
- 		background-repeat: no-repeat;
- 		background-size: cover;
- 		overflow: hidden;
- 		-webkit-user-select: none;
-	    -moz-user-select: none;
-	    -ms-user-select: none;
-	    -o-user-select: none;
-	    user-select: none;
- 	}
- </style>
+  #snapchat:hover{
+        opacity:0.5;
+        position:absolute;
+        left: 37%;
+    top: 65%;   
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+                text-align: center;
+                -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+                -moz-animation: fadein 3s; /* Firefox < 16 */
+                        -ms-animation: fadein 3s; /* Internet Explorer */
+                                -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+  }
+
+  a:link {
+        color: white;
+        text-decoration: none;
+  }
+
+  a:visited {
+        color: white;
+        text-decoration: none;
+  }
+
+  a:hover {
+        color: grey;
+        text-decoration: none;
+  }
+
+  a:active {
+        color: white;
+        text-decoration: none;
+  } 
+
+  /*]]>*/
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <div id="matt">
+    <h1><a href="http://bit.ly/siteyt">MattCS</a></h1>
+  </div>
+
+  <div id="twitter">
+    <a href="http://bit.ly/sitetwitter1"><img src="icons-white/twitter.png" /></a>
+  </div>
+
+  <div id="steam">
+    <a href="http://bit.ly/sitesteamurl"><img src="icons-white/steam.png" /></a>
+  </div>
+
+  <div id="snapchat">
+    <a href="http://bit.ly/sitesnapchat"><img src="icons-white/snapchat.png" /></a>
+  </div>
+
+  <div id="instagram">
+    <a href="http://bit.ly/siteinsta"><img src="icons-white/instagram.png" /></a>
+  </div>
+	
+	<div id="codes">
+    <h1><a href="codes.html">FREE SKINS</a></h1>
+  </div>
+	
+  </div><script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type=
+  "text/javascript">
+</script><script type="text/javascript">
+
+function changevolume(amount) {
+    var audioobject = document.getElementsByTagName("audio")[0];
+    audioobject.volume = amount;
+}
+
+
+//<![CDATA[
+  particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 62,
+      "density": {
+        "enable": true,
+        "value_area": 1341.5509907748635
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 126.26362266116361,
+      "color": "#ff0000",
+      "opacity": 0.3787908679834909,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3.1,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 311.6883116883117,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 119.88011988011988,
+        "size": 7.992007992007992,
+        "duration": 10,
+        "opacity": 1,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+  });
+  //]]>
+  </script>
+</body>
+</html>
