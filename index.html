@@ -18,9 +18,13 @@ http://plopp.site/
 <html xmlns="http://www.w3.org/1999/xhtml">
 <link rel="shortcut icon" href="favicon.png">
 <head>
-<audio loop autoplay>
-<source src="music.mp3">
-</audio>
+<audio autoplay loop id="player">
+	<source src="music.mp3" type="audio/mp3"/>
+	<script>
+		var audio = document.currentScript.parentElement;
+		audio.volume = 0.30;
+	</script>
+ </audio>
 
   <title>MattCS</title>
   <style type="text/css">
