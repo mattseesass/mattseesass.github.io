@@ -1,0 +1,61 @@
+body {
+  background: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font: 20px Roboto, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* Fallback Fonts */
+  color: white;
+  margin: 0;
+}
+
+label {
+  font-size: 12px;
+  margin-left: 4px; 
+  -webkit-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none;
+}
+
+form input {
+  margin: 0;
+}
+
+#knives, div[id^="dot"], img {
+  pointer-events: none;
+}
+
+#knives {
+	position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#codes {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#codes div {
+  padding: 0 10px;
+  width: 200px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}

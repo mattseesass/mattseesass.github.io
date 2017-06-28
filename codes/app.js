@@ -1,10 +1,38 @@
-var image="m9.png";
-var no = 13; 
-var time = 0;
-var speed =35;
-var i, dwidth = 900, dheight =500; 
-var nht = dheight;
-var toppos = 0;
+document.addEventListener('DOMContentLoaded', function(){
+  // Volume Slider & Music
+  var song = new Audio('music.mp3');
+  song.volume = 0.25;
+  song.autoLoop = true;
+  song.play();
+  document.getElementById('vol').onchange = function(){
+    song.volume = this.value;
+  }
+  
+  // Disable form
+  document.getElementsByTagName('form')[0].onsubmit = function(){
+    return false;
+  }
+
+  // Toggle Knives
+  document.getElementById('toggleKnives').onchange = function(){
+    if (this.checked) {
+      var css = document.createElement('style');
+      css.innerHTML = 'div[id^="dot"],img{display:none;}';
+      css.id = 'css';
+      document.head.appendChild(css)
+    } else {
+      document.head.removeChild(document.getElementById('css'));
+    }
+  }
+});
+
+var no = 13,
+    time = 0,
+    speed = 35,
+    i,
+    dwidth = 900,
+    dheight = nht = 500,
+    toppos = 0;
 
 if(document.all){
 	var ie4up = 1;
@@ -54,7 +82,7 @@ ranrot();
  	
 function iecompattest()
 {
-	if(document.compatMode && document.compatMode!="BackCompat")
+	if(document.compatMode && document.compatMode!='BackCompat')
 	{
 		return document.documentElement;
 	}else{
@@ -87,7 +115,7 @@ for (i = 0; i < no; ++ i) {
 	am[i] = Math.random()*20;
 	sx[i] = 0.02 + Math.random()/10;
 	sy[i] = 0.7 + Math.random();
-	document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px;LEFT: 15px;\"><img src='"+image+"' border=\"0\"><\/div>");
+	document.getElementById('knives').innerHTML += '<div id="dot' + i + '" style="position:absolute;z-index:' + i + ';visibility:visible;top:15px;left:15px;"><img src="m9.png" border="0"></div>';
 }
 
 function animation() {
