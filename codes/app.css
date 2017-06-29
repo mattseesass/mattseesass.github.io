@@ -1,6 +1,5 @@
 body {
-  background: url(bg.jpg);
-  background-repeat: no-repeat;
+  background: url(bg.jpg) no-repeat center center fixed;
   background-size: cover;
   font: 20px Roboto, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* Fallback Fonts */
   color: white;
