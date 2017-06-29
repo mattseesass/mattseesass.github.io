@@ -1,0 +1,132 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  to {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  to {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #000;
+}
+
+body {
+  font-family: Roboto, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* Fallback Fonts */
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#codes {
+  color:white;
+  position: absolute;
+  left: 50%;
+  top: 97%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#matt {
+  font-size:25px;
+  color:white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#twitter a,
+#steam a,
+#instagram a,
+#snapchat a {
+  background-image: url(social.png);
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+#twitter a:hover,
+#steam a:hover,
+#instagram a:hover,
+#snapchat a:hover {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+#twitter a{
+  left:37%;
+  top:35%;
+  background-position: -79px -79px;
+}
+
+#steam a{
+  left: 63%;
+  top: 35%;
+  background-position: -5px -79px;
+}
+
+#instagram a{
+  left: 63%;
+  top: 65%;
+  background-position: -5px -5px;
+}
+
+#snapchat a{
+  left: 37%;
+  top: 65%;
+  background-position: -79px -5px;
+}
