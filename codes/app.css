@@ -3,7 +3,6 @@ body {
   background-size: cover;
   font: 20px Roboto, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* Fallback Fonts */
   color: white;
-  margin: 0;
 }
 
 label {
