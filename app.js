@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // Volume Slider & Music
   var song = new Audio('music.mp3');
   song.volume = 0.25;
-  song.autoLoop = true;
+  song.loop = true;
   song.play();
   document.getElementById('vol').onchange = function(){
     song.volume = this.value;
